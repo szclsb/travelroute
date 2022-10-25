@@ -1,0 +1,16 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.route-item {
+    border-color: black;
+    border-style: solid;
+    border-width: 0.2em;
+    border-radius: 1.2em;
+    margin: 0.3em;
+    padding: 1em;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}

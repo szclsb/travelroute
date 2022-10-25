@@ -4,13 +4,14 @@ import * as path from "path";
 
 const app = express();
 
-app.set('views', path.join(__dirname, "assets", "views"))
+app.use('/static', express.static(__dirname + '/public'));
+app.set('views', path.join(__dirname, "views"))
 app.set('view engine', 'pug')
 app.listen(8080, () => {
     app.get("/", (req, res) => {
         res.render('index', {
-            title: 'Hey',
-            message: 'Hello there!'
+            title: 'Travel Routes',
+            routes: [{name: 'Iceland 2022', path: "/icland22"}]
         });
     })
     console.log( `server started at http://localhost:8080`);

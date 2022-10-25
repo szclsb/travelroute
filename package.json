@@ -5,8 +5,9 @@
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "clean": "rimraf ./dist/",
-    "copy-files": "copyfiles -u 1 ./assets/**/* ./dist/assets/",
-    "build": "npm run clean && tsc && npm run copy-files",
+    "copy-static": "copyfiles -u 1 public/**/* ./dist/public/",
+    "copy-views": "copyfiles -u 1 views/**/* ./dist/views/",
+    "build": "npm run clean && tsc && npm run copy-static && npm run copy-views",
     "prestart": "npm run build",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
