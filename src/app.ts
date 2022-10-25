@@ -11,7 +11,13 @@ app.listen(8080, () => {
     app.get("/", (req, res) => {
         res.render('index', {
             title: 'Travel Routes',
-            routes: [{name: 'Iceland 2022', path: "/icland22"}]
+            routes: [{name: 'Iceland 2022', path: "/iceland22"}]
+        });
+    })
+    app.get("/iceland22", (req, res) => {
+        res.render('iceland22', {
+            title: 'Travel Routes',
+            heading: 'Iceland 2022'
         });
     })
     console.log( `server started at http://localhost:8080`);
