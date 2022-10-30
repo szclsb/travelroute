@@ -14,3 +14,7 @@
     text-decoration: none;
     text-align: center;
 }
+
+.map {
+    border: 1px solid black;
+}
